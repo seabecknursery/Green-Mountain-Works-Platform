@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    <title>Green Mountain Works Primary Controller</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/gmw.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .gmw-primary{color:#fff;background-color:#161616}
+        .gmw-sec{color: #161616; background-color: #f2d7c9;}
+    </style>
+
+    <body class="gmw-light-grey">
+        <!-- Top container -->
+        <div class="gmw-bar gmw-top gmw-primary gmw-large" style="z-index: 4;">
+            <button class="gmw-bar-item gmw-button gmw-hide-large gmw-hover-none
+                gmw-hover-text-light-grey" onclick="gmw_open();">
+                <i class="fa fa-bars"></i>
+                Menu
+            </button>
+            <img
+                src="img/logo.png"
+                class="gmw-bar-item"
+                style="width: 100px;"
+                alt="Seabeck Nursery"
+            >
+        </div>
+        <!-- Sidebar/menu -->
+        <nav class="gmw-sidebar gmw-collapse gmw-white gmw-animate-left" style="z-index: 3; width: 300px;" id="mySidebar">
+            <br>
+            <div class="gmw-container">
+                <h5>Plants your growing.</h5>
+                <hr>
+            </div>
+            <div class="gmw-bar-block">
+                <a
+                    href="#"
+                    class="gmw-bar-item gmw-button gmw-padding-16 gmw-hide-large
+                    gmw-dark-grey gmw-hover-black"
+                    onclick="gmw_close()"
+                    title="close menu"
+                >
+                    <i class="fa fa-remove fa-fw"></i>
+                    Close
+                    Menu
+                </a>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Vegetables')">
+                    <b>Vegetables</b>
+                </a>
+                <div id="Vegetables" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left" onclick="myFunction('Artichoke')">
+                        <b>Artichoke</b>
+                    </a>
+                    <div id="Artichoke" class="gmw-hide">
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left">
+                                Impearil Star
+                            </label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Green Globe</label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Purple Italian Globe</label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Violet</label>
+                        </a>
+                    </div>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left" onclick="myFunction('Asparagus')">
+                        <b>Asparagus</b>
+                    </a>
+                    <div id="Asparagus" class="gmw-hide">
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Millennium</label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Purple Passion</label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Jersey Supreme</label>
+                        </a>
+                        <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                            gmw-margin-left">
+                            <label class="gmw-margin-left"> Jersey Knight</label>
+                        </a>
+                    </div>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        Beans
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    <b>Shrubs</b>
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    <b>Flowers</b>
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    <b>Groundcover</b>
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    <b>Trees</b>
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    Ornamental Grasses
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    Lawn Grass
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    Cactus & Succulents
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    Fruits
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    House Plants
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+                <a href="#" class="gmw-bar-item gmw-button gmw-padding" onclick="myFunction('Demo1')">
+                    Herbs
+                </a>
+                <div id="Demo1" class="gmw-hide">
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Abraham Lincoln
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Bush
+                        Boy
+                    </a>
+                    <a href="#" class="gmw-bar-item gmw-button gmw-padding
+                        gmw-margin-left">
+                        <input class="gmw-check
+                            gmw-margin-right" type="checkbox">
+                        Early
+                        Girl
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div
+            class="gmw-overlay gmw-hide-large gmw-animate-opacity"
+            onclick="gmw_close()"
+            style="cursor: pointer;"
+            title="close side menu"
+            id="myOverlay"
+        ></div>
+        <!-- !PAGE CONTENT! -->
+        <div class="gmw-main" style="margin-left: 300px; margin-top: 43px;">
+            <!-- Header -->
+            <header class="gmw-container" style="padding-top: 22px; padding-bottom: 10px;">
+                <h5>
+                    <b>
+                        <i class="fa fa-dashboard"></i> Ready to be harvested.
+                    </b>
+                    <button class="gmw-btn gmw-sec gmw-right gmw-round" onclick="document.getElementById('id01').style.display='block'">
+                        Add Plant
+                    </button>
+                </h5>
+                <div id="id01" class="gmw-modal">
+                    <div class="gmw-modal-content gmw-card-4 gmw-animate-zoom" style="max-width: 600px;">
+                        <div class="gmw-center">
+                            <br>
+                            <span onclick="document.getElementById('id01').style.display='none'" class="gmw-button gmw-xlarge gmw-hover-red
+                                gmw-display-topright" title="Close Modal">&times;</span>
+                           
+                        </div>
+                        <form class="gmw-container" action="/action_page.php">
+                            <div class="gmw-section">
+                                <label>
+                                    <b>Plant/Crop Name (optional)</b>
+                                </label>
+                                <input
+                                    class="gmw-input gmw-border
+                                    gmw-margin-bottom"
+                                    type="text"
+                                    placeholder=""
+                                    name="usrname"
+                                    required
+                                >
+
+                                <label>
+                                    <b>Plant Catagory</b>
+                                </label>
+                                <select class="gmw-select  gmw-border" name="option">
+                                    <option value="" disabled selected>Choose your plant type.</option>
+                                    <option value="1">Vegetable</option>
+                                    <option value="2">Fruit</option>
+                                    <option value="3">Herb</option>
+                                    <option value="4">House Plant</option>
+                                    <option value="5">Ornamental Grass</option>
+                                    <option value="6">Lawn Grass</option>
+                                    <option value="7">Shrubs</option>
+                                    <option value="8">Flowers</option>
+                                    <option value="9">Cactus & Succulent</option>
+                                  </select>
+
+                                </br></br>
+
+                                  <label>
+                                    <b>Plant Type</b>
+                                </label>
+                                <select class="gmw-select  gmw-border" name="option">
+                                    <option value="" disabled selected>Choose your plant type.</option>
+                                    <option value="1">Arugula</option>
+                                    <option value="2">Asparagus</option>
+                                    <option value="3">Artichoke</option>
+                                    <option value="4">Beans</option>
+                                    <option value="5">Beets</option>
+                                  </select>
+                            </div>
+                        </form>
+                        <div class="gmw-container gmw-border-top gmw-padding-16
+                            gmw-light-grey">
+                            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="gmw-button gmw-sec gmw-round gmw-right">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="gmw-row-padding gmw-margin-bottom">
+                <div class="gmw-quarter">
+                    <div class="gmw-container gmw-green gmw-padding-16">
+                        <h4 class="gmw-center">Broccoli (BC1611 F1)</h4>
+                    </div>
+                </div>
+                <div class="gmw-quarter">
+                    <div class="gmw-container gmw-green gmw-padding-16">
+                        <h4 class="gmw-center">Arugula (Rocket)</h4>
+                    </div>
+                </div>
+                <div class="gmw-quarter">
+                    <div class="gmw-container gmw-green gmw-padding-16">
+                        <h4 class="gmw-center">Artichoke (Green Globe)</h4>
+                    </div>
+                </div>
+                <div class="gmw-quarter">
+                    <div class="gmw-container gmw-green gmw-padding-16">
+                        <h4 class="gmw-center">Arugula (Rocket)</h4>
+                    </div>
+                </div>
+                <div class="gmw-panel">
+                    <div class="gmw-row-padding gmw-margin-top" style="margin: 0
+                        -16px;">
+                        <header class="gmw-container" style="padding-top:
+                            22px;">
+                            <h5>
+                                <b>
+                                    <i class="fa fa-dashboard"></i> Alerts.
+                                </b>
+                            </h5>
+                        </header>
+
+                        <table class="gmw-table gmw-striped gmw-white">
+                            <tr>
+                                <td>
+                                    <i class="fa fa-thumbs-up gmw-text-green
+                                        gmw-large"></i>
+                                </td>
+                                <td>Broccoli (BC1611 F1) Water Cycle Completed.</td>
+                                <td>
+                                    <i>10 mins</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fa fa-thumbs-up gmw-text-green
+                                        gmw-large"></i>
+                                </td>
+                                <td>Arugula (Rocket) Water Cycle Completed.</td>
+                                <td>
+                                    <i>15 mins</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="fa fa-bell gmw-text-red
+                                        gmw-large"></i>
+                                </td>
+                                <td>Arugula (Rocket) is Detecting High Temps</td>
+                                <td>
+                                    <i>17 mins</i>
+                                </td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- End page content -->
+        </div>
+        <script>
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function gmw_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+          overlayBg.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+          overlayBg.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function gmw_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+      }
+
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("gmw-show") == -1) {
+          x.className += " gmw-show";
+        } else {
+          x.className = x.className.replace(" gmw-show", "");
+        }
+      }
+        </script>
+    </body>
+</html>
